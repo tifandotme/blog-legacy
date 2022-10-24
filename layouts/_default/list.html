@@ -1,0 +1,29 @@
+{{ define "main" }}
+<header>
+    {{ if .RegularPages }}
+        <h1 style="text-align: center">{{ .Title }} Posts</h1>
+    {{ else }}
+        <h1 style="text-align: center">{{ .Title }}</h1>
+    {{ end }}
+</header>
+
+<section style="padding-top: 4rem">
+    {{ .Content }}
+</section>
+
+<nav>
+    {{ range .Pages.GroupByDate "2006" "asc" }}
+    <h2>{{ .Key }}</h2>
+    <hr>
+    <ul style="list-style-type: none">
+        {{ range .Pages.ByTitle }}
+        <li>
+        {{ .Date.Format "Jan 2" }} <a href="{{ .Permalink }}">{{ .Title }}</a>
+        
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</nav>
+
+{{ end }}

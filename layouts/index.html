@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<header>
+    <p>Hi!, I'm Tifan. A software developer living in Indonesia. This is my blog consisting of tech and personal posts.</p>
+    <p>GitHub | </p>
+</header>
+
+{{ .Content }}
+
+<nav>
+    <section>
+        <h2>Latest <a href="/tech">tech posts</a></h2>
+        <ol>
+        {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
+        <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+        {{ end }}
+        </ol>
+    </section>
+
+    <section>
+        <h2>Latest <a href="/personal">personal posts</a></h2>
+        <ol>
+        {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
+        <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+        {{ end }}
+        </ol>
+    </section>
+</nav>
+
+{{ end }}

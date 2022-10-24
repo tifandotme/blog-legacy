@@ -1,0 +1,12 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+{{ if isset .Params "title" }}
+    <title>{{ .Title }} - {{ site.Title }}</title>
+{{ else }}
+    <title>{{ .Title }}</title>
+{{ end }}
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+    	{{ partial "meta.html" . }}
+    </head>
+    <body>
+        <article>
+            {{ block "main" . }}
+            {{ end }}
+        </article>
+        <footer>
+            <p><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+          	<!--
+            <hr>
+            kind: {{ .Kind }} <br>
+            budle type: {{ .BundleType }}<br>
+            {{.Type}}
+            <br>
+			{{.CurrentSection}}<br>
+			The page’s current section. The value can be the page itself if it is a section or the homepage.<br>
+			{{.FirstSection}}<br>
+			The page’s first section below root, e.g. /docs, /blog etc.<br>
+			{{.Parent}}<br>
+			A section’s parent section or a page’s section.<br>
+			{{.Section}}<br>
+			The section this content belongs to. Note: For nested sections, this is the first path element in the directory, for example, /blog/funny/mypost/ => blog.<br>
+			<br>
+			The sections below this content.<br>
+            <hr>
+            {{ range $key, $value := .Params }}
+            	{{ printf "%#v = %#v" $key $value }} <br/>
+        	{{ end }}
+        	<hr>-->
+        </footer>
+    </body>
+</html>

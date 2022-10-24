@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<header class="single">
+	{{ partial "breadcrumb.html" . }}
+
+	<h1>{{.Title}}</h1>
+	<h3>{{.Description}}</h3>
+	<h4>Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</h4>
+</header>
+
+{{ .Content }}
+
+{{ end }}
