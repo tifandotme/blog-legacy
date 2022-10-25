@@ -1,5 +1,5 @@
 :root {
-    --bg-header: #242424;
+    --bg-header: #151515;
 
 }
 
@@ -13,6 +13,7 @@ body {
     max-width:750px;
     padding: 2rem;
     font: 1.1em sans-serif;
+    line-height: 1.6;
 }
 
 @media print{
@@ -45,12 +46,17 @@ header.single {
     margin:-2rem calc(0px - (50vw - 50%)) 2rem;
     padding-left:calc(50vw - 50%);
     padding-right:calc(50vw - 50%);
-    border-bottom:1px solid darkgray;
+    border-bottom:1.5px solid #262626;
 }
 
 h1,h2,h3,h4,h5,h6 {
     line-height: 1.2;
-    padding-top: 0.875rem;
+    padding-top: 0.875em;
+}
+
+p {
+    line-height: 1.6;
+    padding-top: 1em;
 }
 
 h1{
