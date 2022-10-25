@@ -3,7 +3,6 @@ title = 'Testing Markdown'
 description = 'Aliquam sit amet orci vel lectus venenatis tempus non quis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit'
 tags = ['markdown', 'yeah', 'lol']
 date = 2022-10-25T07:16:17+07:00
-draft = true
 +++
 
 # Lorem Ipsum ─ Header1
