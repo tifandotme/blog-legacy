@@ -1,29 +1,33 @@
 {{ define "main" }}
 
-<header>
-    <p>Hi!, I'm Tifan. A software developer living in Indonesia. This is my blog consisting of tech and personal posts.</p>
-    <p>GitHub | </p>
-</header>
-
+<p>Hi!, I'm <strong>Tifan</strong>. A software developer living in Indonesia. Thanks for visiting my blog!. I post tech and personal stuff. <a href="/about">More about me</a>.</p>
+<h2>Contact Details</h2>
+<ul>
+    <li>Email: <a href="mailto:hello@tifan.me">hello@tifan.me</a></li>
+    <li>GitHub: <a href="https://github.com/tifandotme">@tifandotme</a></li>
+    <li>Twitter: <a href="https://twitter.com/tifandotme">@tifandotme</a></li>
+</ul>
 {{ .Content }}
 
 <nav>
     <section>
-        <h2>Latest <a href="/tech">tech posts</a></h2>
+        <h2>Latest tech posts</h2>
         <ol>
         {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
         <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
         {{ end }}
         </ol>
+        <span style="padding-left: 2.5rem; font-weight: bold; font-size: 1.1em"><a href="/tech">Show more..</a></span>
     </section>
 
     <section>
-        <h2>Latest <a href="/personal">personal posts</a></h2>
+        <h2>Latest personal posts</h2>
         <ol>
         {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
         <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
         {{ end }}
         </ol>
+        <span style="padding-left: 2.5rem; font-weight: bold; font-size: 1.1em"><a href="/personal">Show more..</a></span>
     </section>
 </nav>
 
