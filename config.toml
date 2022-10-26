@@ -2,4 +2,8 @@ baseURL = 'https://tifan.me/'
 languageCode = 'en-us'
 title = 'Tifan Dwi Avianto'
 pluralizelisttitles = 'false'
+[params]
+    author = 'Tifan Dwi Avianto'
+    description = "Tifan's blog containing tech and personal-related posts"
+
 

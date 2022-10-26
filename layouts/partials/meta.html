@@ -6,6 +6,7 @@
 {{ else }}
     <title>{{ .Title }}</title>
 {{ end }}
+<meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 <!--<link rel="icon" type="image/png" href="data:image/png;base64,">  default favicon -->
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
