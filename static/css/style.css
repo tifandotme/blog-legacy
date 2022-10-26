@@ -1,19 +1,35 @@
+/* DEBUG --------------------- 
+*:hover {outline:1px blue solid;}*/
+
+/* VARIABLES ----------------- */
 :root {
-    --bg-header: #151515;
-
+    --tx-body: #1a1a1a;
+    --bg-body: #fff;
+    --tx-link: #1a0dab;
+    --bg-header: #e8e8e8;
+    --bg-header-outline: #d2d2d2;
+    --bg-code-inline: #d2d2d2;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+@media (prefers-color-scheme: dark){
+    :root {
+        --tx-body: #e3e3e3;
+        --bg-body: #000;
+        --tx-link: #2c94ff;
+        --bg-header: #111;
+        --bg-header-outline: #222;
+        --bg-code-inline: #2b2b2b;
+    }
 }
 
+/* GLOBALS ------------------- */
 body {
+    color: var(--tx-body);
+    background: var(--bg-body);
     margin:0 auto;
-    max-width:750px;
-    padding: 2rem;
-    font: 1.1em sans-serif;
-    line-height: 1.6;
+    max-width: 40em;
+    padding: 1em;
+    font: 1.1em/calc(1ex / 0.32) "Inter", "Liberation Sans", sans-serif;
 }
 
 @media print{
@@ -22,43 +38,144 @@ body {
     }
 }
 
-/* LINKS */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+pre {
+    overflow: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+}
+
+/* HYPERLINK ----------------- */
 a {
     text-decoration: none;
-    color:#1a0dab;
+    color: var(--tx-link);
 }
+
 a:hover,a:visited:hover {
     text-decoration: underline
 }
 
-/* COLORS IN DARK/LIGHT MODE  */
-body {
-    color: #1a1a1a;
-}
-@media (prefers-color-scheme: dark){
-    body {color:#ededed;background:#000}
-    a {color:#2c94ff}
-}
+/* HEADINGS ------------------ */
 
-header.single {
-    background: var(--bg-header);
-    padding:2rem 1.5rem;
-    margin:-2rem calc(0px - (50vw - 50%)) 2rem;
-    padding-left:calc(50vw - 50%);
-    padding-right:calc(50vw - 50%);
-    border-bottom:1.5px solid #262626;
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+h1 + blockquote, h2 + blockquote, h3 + blockquote,
+h4 + blockquote, h5 + blockquote, h6 + blockquote,
+h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol,
+h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
+    margin-top: 0.25em;
 }
 
 h1,h2,h3,h4,h5,h6 {
+    margin: 1em 0 .25em;
     line-height: 1.2;
-    padding-top: 0.875em;
+}
+    
+h1, h2, h3 {
+    padding-bottom: .25em;
+    border-bottom: 1px solid var(--bg-header-outline);
 }
 
-p {
-    line-height: 1.6;
-    padding-top: 1em;
+h1 {
+    font-size: 2rem;
 }
 
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* CODE BLOCK ---------------- */
+
+code {
+    background: var(--bg-code-inline);
+    padding: .125rem .25rem;
+    border-radius: .25em;
+    font: 1.1em monospace;
+}
+
+blockquote {
+  background: var(--bg-code-inline);
+  border-left: 10px solid #ccc;
+  margin: 1rem .25rem;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote p {
+  display: inline;
+}
+
+/* SINGLE PAGE'S HEADER ------ */
+
+header.single {
+    background: var(--bg-header);
+    padding:4.5rem 1.5rem 1rem;
+    margin:-3.7em calc(0px - (50vw - 50%)) 2rem;
+    padding-left:calc(50vw - 50%);
+    padding-right:calc(50vw - 50%);
+    border-bottom:1.5px solid var(--bg-header-outline);
+}
+
+header.single h1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    margin: 0;
+    border: none;
+}
+
+header.single h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+}
+
+/* LIST PAGE'S HEADER -------- */
+
+header.list {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+header.list h1 {
+    border: none;
+}
+
+/* SVG ----------------------- */
+
+a.icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+a.icon svg {
+    color: var(--tx-body);
+    height: auto;
+}
+
+a.icon span {
+    padding-left: .3em;
+}
+
+/* FOOTER -------------------- */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* ===============================================================================================
 h1{
     font-size:2.25rem
 }
@@ -85,8 +202,11 @@ ol,ul {
 li {
     padding-left: 0.5rem;
 }
+*/
 
-/* BREADCRUMB */ 
+
+
+/* BREADCRUMB 
 nav.breadcrumb ul {
     list-style: none;
     display: flex;
@@ -104,9 +224,5 @@ nav.breadcrumb ul li + li:before {
     content: "/";
     padding: 0.3rem;
 }
+*/
 
-/* FOOTER */
-footer {
-    text-align: center;
-    margin-top: 4rem;
-}

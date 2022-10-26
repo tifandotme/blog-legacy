@@ -1,13 +1,16 @@
 {{ define "main" }}
 
-<header class="single">
-	{{ partial "back.html" . }}
+{{ partial "back.html" . }}
 
-	<h1>{{.Title}}</h1>
-	<h3>{{.Description}}</h3>
-	<h4>Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</h4>
-</header>
+<article>
+    <header class="single">
+        <h1>{{.Title}}</h1>
+        <h3 aria-hidden="true">{{.Description}}</h3>
+        <h4 aria-hidden="true">Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</h4>
+    </header>
 
-{{ .Content }}
+    {{ .Content }}
+    
+</article>
 
 {{ end }}

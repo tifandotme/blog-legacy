@@ -1,34 +1,38 @@
 {{ define "main" }}
 
-<p>Hi!, I'm <strong>Tifan</strong>. A software developer living in Indonesia. Thanks for visiting my blog!. I post tech and personal stuff. <a href="/about">More about me</a>.</p>
-<h2>Contact Details</h2>
-<ul>
-    <li>Email: <a href="mailto:hello@tifan.me" target="_blank">hello@tifan.me</a></li>
-    <li>GitHub: <a href="https://github.com/tifandotme" target="_blank">@tifandotme</a></li>
-    <li>Twitter: <a href="https://twitter.com/tifandotme" target="_blank">@tifandotme</a></li>
-</ul>
-{{ .Content }}
+<article>
+    <p>Hi! I'm <strong>Tifan</strong>. An aspiring software developer living in Indonesia. Thank you for visiting my blog! <a href="/about">More about me</a>.</p>
+    <h2>Contact & Socials</h2>
+    <ul role="list" style="padding-left: 1em;">
+        <li><a class="icon" href="mailto:hello@tifan.me" target="_blank">{{ partial "icons/email.html" . }}<span>hello@tifan.me</span></a></li>
+        <li><a class="icon" href="https://github.com/tifandotme" target="_blank">{{ partial "icons/github.html" . }}<span>GitHub</span></a></li>
+        <li><a class="icon" href="https://twitter.com/tifandotme" target="_blank">{{ partial "icons/twitter.html" . }}<span>Twitter</span></a></li>
+        <li><a class="icon" href="https://www.linkedin.com/in/tifandotme" target="_blank">{{ partial "icons/linkedin.html" . }}<span>LinkedIn</span></a></li>
+    </ul>
+    
+    {{ .Content }}
 
-<nav>
-    <section>
-        <h2>Latest tech posts</h2>
-        <ol>
-        {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
-        <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
-        {{ end }}
-        </ol>
-        <span style="padding-left: 2.5rem; font-weight: bold; font-size: 1.1em"><a href="/tech">Show more..</a></span>
-    </section>
+    <nav>
+        <section>
+            <h2>Latest Tech Posts</h2>
+            <ol>
+            {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
+            <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+            {{ end }}
+            </ol>
+            <span style="padding-left: 2.5rem; font-weight: bold"><a href="/tech">Show more..</a></span>
+        </section>
 
-    <section>
-        <h2>Latest personal posts</h2>
-        <ol>
-        {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
-        <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
-        {{ end }}
-        </ol>
-        <span style="padding-left: 2.5rem; font-weight: bold; font-size: 1.1em"><a href="/personal">Show more..</a></span>
-    </section>
-</nav>
+        <section>
+            <h2>Latest Personal Posts</h2>
+            <ol>
+            {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
+            <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+            {{ end }}
+            </ol>
+            <span style="padding-left: 2.5rem; font-weight: bold"><a href="/personal">Show more..</a></span>
+        </section>
+    </nav>
+</article>
 
 {{ end }}
