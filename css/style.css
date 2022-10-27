@@ -29,7 +29,7 @@ body {
     margin:0 auto;
     max-width: 40em;
     padding: 1em;
-    font: 1.1em/calc(1ex / 0.32) "Inter", "Liberation Sans", sans-serif;
+    font: 1.1em/calc(1ex / 0.32) "Liberation Sans", sans-serif;
 }
 
 @media print{
@@ -129,8 +129,6 @@ header.single {
 }
 
 header.single h1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 900;
     font-size: 2.2rem;
     margin: 0;
     border: none;
@@ -225,4 +223,3 @@ nav.breadcrumb ul li + li:before {
     padding: 0.3rem;
 }
 */
-
