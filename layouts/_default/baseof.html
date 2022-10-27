@@ -7,7 +7,8 @@
         {{ block "main" . }}
         {{ end }}
         <footer>
-            <a href="{{ .Site.BaseURL }}">{{ replaceRE "^https?://([^/]+).*" "$1" .Site.BaseURL }}</a>
+            <a href="{{ .Site.BaseURL }}">{{ replaceRE "^https?://([^/]+).*" "$1" .Site.BaseURL }}</a><br>
+            <a href="{{ .Site.BaseURL }}index.xml" target="_blank">{{ partial "icons/rss.html" . }}</a>
         </footer>
     </body>
 </html>
