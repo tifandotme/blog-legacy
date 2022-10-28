@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Tifan Dwi Avianto'
 pluralizelisttitles = 'false'
 enableRobotsTXT = 'true'
+enableGitInfo = 'true'
 [params]
     author = 'Tifan Dwi Avianto'
     description = "Tifan's blog containing tech and personal-related posts"
