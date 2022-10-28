@@ -8,8 +8,8 @@
     --tx-link: #1a0dab;
     --bg-header: #e8e8e8;
     --bg-header-outline: #d2d2d2;
-    --bg-blockquote: #1a1a1a;
-    --bg-blockquote-border: #353535;
+    --bg-blockquote: #e8e8e8;
+    --bg-blockquote-border: #a8a8a8;
 }
 
 @media (prefers-color-scheme: dark){
@@ -20,6 +20,8 @@
         --bg-header: #111;
         --bg-header-outline: #222;
         --bg-code-inline: #2b2b2b;
+        --bg-blockquote: #1a1a1a;
+    	--bg-blockquote-border: #353535;
     }
 }
 
