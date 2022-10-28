@@ -8,7 +8,8 @@
     --tx-link: #1a0dab;
     --bg-header: #e8e8e8;
     --bg-header-outline: #d2d2d2;
-    --bg-code-inline: #d2d2d2;
+    --bg-blockquote: #1a1a1a;
+    --bg-blockquote-border: #353535;
 }
 
 @media (prefers-color-scheme: dark){
@@ -27,9 +28,9 @@ body {
     color: var(--tx-body);
     background: var(--bg-body);
     margin:0 auto;
-    max-width: 40em;
+    max-width: 41em;
     padding: 1em;
-    font: 1.1em/calc(1ex / 0.32) "Liberation Sans", sans-serif;
+    font: 1.1em/calc(1ex / 0.32) "Helvetica Neue", "Helvetica", "Arial", "Liberation Sans", sans-serif;
 }
 
 @media print{
@@ -51,11 +52,8 @@ input, button, textarea, select {
   font: inherit;
 }
 
-ul[role="list"], ol[role="list"] {
-  list-style: none;
-}
-
 /* HYPERLINK ----------------- */
+
 a {
     text-decoration: none;
     color: var(--tx-link);
@@ -86,35 +84,71 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.8em;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: .875em;
 }
 
 /* CODE BLOCK ---------------- */
 
 code {
-    background: var(--bg-code-inline);
-    padding: .125rem .25rem;
+    background: var(--bg-blockquote);
+    padding: .25rem .25rem;
     border-radius: .25em;
     font: 1.1em monospace;
+    border: 1px solid var(--bg-blockquote-border) ;
 }
 
 blockquote {
-  background: var(--bg-code-inline);
-  border-left: 10px solid #ccc;
+  background: var(--bg-blockquote);
+  border-left: 10px solid var(--bg-blockquote-border);
   margin: 1rem .25rem;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote p {
   display: inline;
+}
+
+/* IMAGES ON PAGES ----------- */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+
+}
+
+.left, .right {
+    width: 40%;
+    margin: .8em;
+}
+
+@media (max-width: 750px) {
+  .left, .right {
+    float: none;
+    width: 90%;
+    margin: .8em auto;
+  }
 }
 
 /* SINGLE PAGE'S HEADER ------ */
@@ -122,21 +156,21 @@ blockquote p {
 header.single {
     background: var(--bg-header);
     padding:4.5rem 1.5rem 1rem;
-    margin:-3.7em calc(0px - (50vw - 50%)) 2rem;
+    margin:-3.7em calc(0px - (50vw - 50%)) 3.2em;
     padding-left:calc(50vw - 50%);
     padding-right:calc(50vw - 50%);
     border-bottom:1.5px solid var(--bg-header-outline);
 }
 
 header.single h1 {
-    font-size: 2.2rem;
     margin: 0;
     border: none;
+    font-family: "Gill Sans", "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
 }
 
 header.single h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.3em;
+    font-weight: ;
     border: none;
 }
 
@@ -151,26 +185,72 @@ header.list h1 {
     border: none;
 }
 
-/* SVG ----------------------- */
+/* LATEST POSTS -------------- */
 
-a.icon {
+nav.latest {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+nav.latest h2 {
+    margin-top: .4em;
+}
+
+nav.latest section {
+    flex: 50%;
+}
+
+@media (max-width: 750px) {
+  nav.latest {
+    flex-direction: column;
+  }
+}
+
+/* SOCIAL -------------------- */
+
+ul.social {
+    padding-left: 2em;
+    list-style-type: none;
+}
+
+ul.social a {
     display: inline-flex;
     align-items: center;
 }
 
-a.icon svg {
+ul.social svg {
     color: var(--tx-body);
-    height: auto;
+    height: 21px;
+    width: 21px;
 }
 
-a.icon span {
-    padding-left: .3em;
+ul.social span {
+    padding-left: .5em;
 }
 
 /* FOOTER -------------------- */
+
 footer {
-    text-align: center;
-    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4em;
+    gap: 1em;
+    clear: both;
+}
+
+footer a {
+    display: inline-flex;
+    align-items: center;
+    padding: .5em;
+}
+
+footer svg {
+    color: orange;
+    height: 21px;
+    width: 21px;
 }
 
 /* ===============================================================================================

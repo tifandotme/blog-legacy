@@ -6,5 +6,3 @@ enableRobotsTXT = 'true'
 [params]
     author = 'Tifan Dwi Avianto'
     description = "Tifan's blog containing tech and personal-related posts"
-
-
