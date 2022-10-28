@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <article>
-    <p>Hi! I'm <strong>Tifan</strong>. An aspiring software developer living in Indonesia. Thank you for visiting my blog! <a href="/about">More about me</a>.</p>
+    <p>Hi! I'm <strong>Tifan</strong>. An aspiring software developer living in Indonesia. Thank you for visiting my blog. <a href="/about">More about me</a>.</p>
     
     {{ .Content }}
 
@@ -9,9 +9,9 @@
         <section>
             <h2>Latest Tech Posts</h2>
             <ol>
-            {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
-            <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
-            {{ end }}
+                {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
+                <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+                {{ end }}
             </ol>
             <span style="padding-left: 2.5rem; font-weight: bold"><a href="/tech">Show more..</a></span>
         </section>
@@ -19,9 +19,9 @@
         <section>
             <h2>Latest Personal Posts</h2>
             <ol>
-            {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
-            <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
-            {{ end }}
+                {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
+                <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+                {{ end }}
             </ol>
             <span style="padding-left: 2.5rem; font-weight: bold"><a href="/personal">Show more..</a></span>
         </section>

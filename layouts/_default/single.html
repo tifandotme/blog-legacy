@@ -5,8 +5,11 @@
 <article>
     <header class="single">
         <h1>{{.Title}}</h1>
-        <h3 aria-hidden="true">{{.Description}}</h3>
+        {{ if .Description }}
+            <h3 aria-hidden="true">{{ .Description }}</h3>
+        {{ end }}
         <h4 aria-hidden="true">Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</h4>
+        <h4 aria-hidden="true">Modified: {{ dateFormat "Monday, Jan 2, 2006" .Lastmod }}</h4>
     </header>
 
     {{ .Content }}

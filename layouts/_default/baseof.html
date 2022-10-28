@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-    <head>
-    	{{ partial "meta.html" . }}
-    </head>
-    <body>
-        {{ block "main" . }}
-        {{ end }}
-        <footer>
-        	{{ if not .IsHome }}<a href="{{ .Site.BaseURL }}">Home</a>{{ end }}
-            <a href="{{ .Site.BaseURL }}index.xml" target="_blank">{{ partial "icons/rss.html" . }}</a>
-        </footer>
-    </body>
+<head>
+    {{ partial "meta.html" . }}
+</head>
+<body>
+    {{ block "main" . }}
+    {{ end }}
+    <footer>
+        {{ if not .IsHome }}<a href="{{ .Site.BaseURL }}">Home</a>{{ end }}
+        <a href="{{ .Site.BaseURL }}index.xml" target="_blank">{{ partial "icons/rss.html" . }}</a>
+    </footer>
+</body>
 </html>

@@ -1,6 +1,6 @@
 +++
 title = 'Guide On Mastering DNF on Fedora'
-description = 'Get to know DNF package manager on Fedora and mastering it'
+description = 'General knowledge on DNF package manager for daily usage'
 tags = ['linux']
 date = 2022-10-28T07:39:43+07:00
 +++
@@ -28,10 +28,29 @@ minrate=30k
 EOF
 ```
 
-- A lot of articles are saying to enable fastestmirror to increase speed, however it is not effective because it's sort only the fastest ping, not fastest bandwidth.
-- On full configuration reference, there is `fastestmirror` option, however it is [not advisable](https://forums.fedoraforum.org/showthread.php?328191-Enable-Fastest-Mirror). `minrate` with a recommendation value of 30k is preferable.
-- `max_parallel_downloads` useless if bandwidth is low. default is set to 3, max 20
-- Because `keepcache` is enabled, cache can be cleaned using the command `dnf clean all`
+## Known options
+
+### `defaultyes`
+
+So you don't have to type "Y" before pressing Enter.
+
+### `fastestmirror`
+
+A lot of articles are saying to enable `fastestmirror` to increase speed, however it is not effective because it's sort only the fastest ping, not fastest bandwidth.
+
+Using `minrate` is [more advisable](https://forums.fedoraforum.org/showthread.php?328191-Enable-Fastest-Mirror).
+
+### `minrate`
+
+This is an alternative of using `fastestmirror`. The recommendation value is 30k.
+
+### `max_parallel_downloads`
+
+Useless if bandwidth is low. default is set to 3, max 20. My own bandwidth here in Indonesia is 10Mbit (I know it's super slow). So I don't use it.
+
+### `keepcache`
+
+Self explanatory. Keep in mind to clean cache occasionaly with `dnf clean all`
 
 # Important Commands
 
