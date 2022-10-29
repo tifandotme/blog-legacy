@@ -1,13 +1,11 @@
 +++
-title = "About Me"
-description = "Introduction of the blog author"
+title = "About"
+description = "About the blog's author"
 aliases = ["about-me", "contact"]
-
+tags = ["index"]
 +++
 
->*Alright*, let's just go straight to the point. I'm not going to refer myself in third person or anything. You are here for the author, so here we go.
-
-Welcome, Tifan Dwi Avianto is my full name. Born in [Tegal, Central Java, Indonesia](https://en.wikipedia.org/wiki/Tegal). I am currently pursuing a Bachelor Degree in Informatics (or Computer Science if you prefer).
+Tifan Dwi Avianto is my full name. Born in [Tegal, Central Java, Indonesia](https://en.wikipedia.org/wiki/Tegal). I am currently pursuing a Bachelor Degree in Informatics (or Computer Science if you prefer).
 
 {{< figure src="potrait.jpg" alt="Author potrait" class="right">}}
 
@@ -40,12 +38,12 @@ Despite MCU overshadowing other action movies. I like other movies too. Here's m
 
 ## Contact
 
-Contact details and socials are on the homepage. Feel free to reach me. Thank you. :)
+Contact details and socials are on the homepage. Feel free to reach me. :)
 
 ## About this site
 
 - Free and open source. [Hosted on GitHub](https://github.com/tifandotme/tifan.me).
-- Built on Hugo.
+- Built with Hugo.
 - I aim for simplicity and functionality, hence the minimal look.
 - It also need to be **blazingly fasttt**.
-- **RSS** are available on the bottom of every pages.
+- **RSS** is available on the bottom of every pages.

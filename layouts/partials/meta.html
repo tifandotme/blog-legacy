@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 {{ if isset .Params "title" }}
-    <title>{{ .Title }} - {{ replaceRE "^https?://([^/]+).*" "$1" .Site.BaseURL }}</title>
+    <title>{{ .Title | title }} - {{ replaceRE "^https?://([^/]+).*" "$1" .Site.BaseURL }}</title>
 {{ else }}
     <title>{{ .Title }}</title>
 {{ end }}

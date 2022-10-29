@@ -4,12 +4,12 @@
 
 <article>
     <header class="single">
-        <h1>{{.Title}}</h1>
+        <h1>{{ .Title | title }}</h1>
         {{ if .Description }}
             <h3 aria-hidden="true">{{ .Description }}</h3>
         {{ end }}
-        <h4 aria-hidden="true">Published: {{ dateFormat "Monday, Jan 2, 2006" .Date }}</h4>
-        <h4 aria-hidden="true">Modified: {{ dateFormat "Monday, Jan 2, 2006" .Lastmod }}</h4>
+        <h4 aria-hidden="true">Published: {{ dateFormat "Jan 2, 2006" .PublishDate }}</h4>
+        <h4 aria-hidden="true">Modified: {{ dateFormat "Jan 2, 2006" .Lastmod }}</h4>
     </header>
 
     {{ .Content }}

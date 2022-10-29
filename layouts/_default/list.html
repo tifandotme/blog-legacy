@@ -20,7 +20,7 @@
 	        <ul>
 	            {{ range .Pages.ByTitle }}
 	            <li>
-	                {{ .Date.Format "Jan 2" }} <a href="{{ .Permalink }}">{{ .Title }}</a>            
+	                {{ .Date.Format "Jan 2" }} <a href="{{ .Permalink }}">{{ .Title | title }}</a>            
 	            </li>
 	            {{ end }}
 	        </ul>

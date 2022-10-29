@@ -10,7 +10,7 @@
             <h2>Latest Tech Posts</h2>
             <ol>
                 {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
-                <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+                <li><a href="{{.RelPermalink}}">{{ .Title | title }}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
                 {{ end }}
             </ol>
             <span style="padding-left: 2.5rem; font-weight: bold"><a href="/tech">Show more..</a></span>
@@ -20,7 +20,7 @@
             <h2>Latest Personal Posts</h2>
             <ol>
                 {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
-                <li><a href="{{.RelPermalink}}">{{.Title}}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
+                <li><a href="{{.RelPermalink}}">{{.Title | title }}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
                 {{ end }}
             </ol>
             <span style="padding-left: 2.5rem; font-weight: bold"><a href="/personal">Show more..</a></span>
