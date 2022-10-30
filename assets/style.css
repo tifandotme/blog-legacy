@@ -201,6 +201,7 @@ pre > code {
     padding: 0;
     border: 0;
     font-size: 1rem;
+    line-height: 1.4rem;
 }
 blockquote {
     background: var(--bg-blockquote);
