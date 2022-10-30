@@ -4,9 +4,9 @@
 
 <article>
     <header class="single">
-        <h1>{{ .Title | title }}</h1>
+        <h1 class="bare fluid">{{ .Title | title }}</h1>
         {{ if .Description }}
-            <h3 aria-hidden="true">{{ .Description }}</h3>
+            <h3 class="bare" aria-hidden="true">{{ .Description }}</h3>
         {{ end }}
         <h4 aria-hidden="true">Published: {{ dateFormat "Jan 2, 2006" .PublishDate }}</h4>
         <h4 aria-hidden="true">Modified: {{ dateFormat "Jan 2, 2006" .Lastmod }}</h4>

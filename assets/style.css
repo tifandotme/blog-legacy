@@ -1,23 +1,35 @@
 /* DEBUG --------------------- 
-*:hover {outline:1px blue solid;}*/
+*:hover {outline:1px blue solid;}
+GUIDELINE
+P, H, ANY BLOCK
 
+margin-top=1em
++---------------+
+|               |
+|               |
++---------------+
+margin-bottom=.25em (1em if adjacent is same type)
+
+*/
 /* VARIABLES ----------------- */
-
 :root {
     --tx-body: #1a1a1a;
     --bg-body: #fff;
+
     --tx-link: #1a0dab;
+
     --bg-header: #e8e8e8;
     --bg-header-outline: #d2d2d2;
     --bg-blockquote: #e8e8e8;
     --bg-blockquote-border: #a8a8a8;
 }
-
 @media (prefers-color-scheme: dark){
     :root {
         --tx-body: #e3e3e3;
         --bg-body: #000;
+
         --tx-link: #2c94ff;
+
         --bg-header: #111;
         --bg-header-outline: #222;
         --bg-code-inline: #2b2b2b;
@@ -27,100 +39,144 @@
 }
 
 /* GLOBALS ------------------- */
-
+figure, blockquote, dl, dd {
+  margin: 0;
+}
 body {
     color: var(--tx-body);
     background: var(--bg-body);
     margin:0 auto;
-    max-width: 41em;
-    padding: 1em;
-    font: 1.1em/calc(1ex / 0.32) "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+    max-width: 750px;
+    padding: 10px;
+    font: 1.1rem/calc(1ex / 0.32) "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
 }
-
 @media print{
     body{
         max-width:none
     }
 }
-
+p, ol, ul {
+    margin: 1em 0;
+}
 img, picture {
     max-width: 100%;
     display: block;
 }
-
 pre {
     overflow: auto;
 }
-
 input, button, textarea, select {
     font: inherit;
 }
+svg {
+    height: 21px;
+    width: 21px;
+}
 
 /* HYPERLINK ----------------- */
-
 a {
     text-decoration: none;
     color: var(--tx-link);
 }
-
 a:hover,a:visited:hover {
     text-decoration: underline
 }
 
 /* HEADINGS ------------------ */
-
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
-h1 + blockquote, h2 + blockquote, h3 + blockquote,
-h4 + blockquote, h5 + blockquote, h6 + blockquote,
-h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol,
-h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
-    margin-top: 0.25em;
+h1 + p, h2 + p, h3 + p, h4 + p,
+h1 + blockquote, h2 + blockquote, h3 + blockquote, h4 + blockquote,
+h1 + ol, h2 + ol, h3 + ol, h4 + ol,
+h1 + ul, h2 + ul, h3 + ul, h4 + ul {
+    margin-top: .25em;
 }
-
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .25em;
     line-height: 1.2;
 }
-
 h1, h2, h3 {
-    padding-bottom: .25em;
+    padding-bottom: .125em;
     border-bottom: 1px solid var(--bg-header-outline);
 }
-
+h1.bare, h2.bare, h3.bare {
+    border: none;
+    padding: 0;
+}
 h1 {
-    font-size: 2em;
+    font-size: 1.9rem;
 }
-
+h1.fluid {
+    font-size: clamp(2rem, 1rem + 2vw, 2.5rem);
+}
 h2 {
-    font-size: 1.75em;
+    font-size: 1.65rem;
 }
-
 h3 {
-    font-size: 1.5em;
+    font-size: 1.35rem;
 }
-
 h4 {
-    font-size: 1.25em;
+    font-size: 1.1rem; /* same as body */
 }
-
 h5 {
-    font-size: 1em;
+    font-size: 1rem; 
+}
+h6 { /* probably unused */
+    font-size: 1rem;
+    color: dimgray;
 }
 
-h6 {
-    font-size: .875em;
+/* BACK NAV ------------------ */
+nav.back {
+    aria-hidden: true;
+    margin-top: 1.5rem;
+}
+nav.back a {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+/* SINGLE PAGE'S HEADER ------ */
+header.single {
+    background: var(--bg-header);
+    padding:5rem calc(50vw - 50%) 2rem;
+    margin:-5rem calc(0px - (50vw - 50%)) 4rem;
+    border-bottom:1.5px solid var(--bg-header-outline);
+}
+header.single h1 {
+    margin-top: .125em;
+}
+header.single h4 + h4 {
+    margin: 0;
+}
+
+/* LIST PAGE'S HEADER -------- */
+header.list {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* LATEST POSTS -------------- */
+nav.latest {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+nav.latest section {
+    flex: 50%;
+}
+@media (max-width: 750px) {
+    nav.latest {
+        flex-direction: column;
+    }
 }
 
 /* CODE BLOCK ---------------- */
-
 code {
     background: var(--bg-blockquote);
-    padding: .25rem .25rem;
-    border-radius: .25em;
-    font: 1.1em monospace;
+    padding: .125rem .25rem;
+    border-radius: .25em;   
     border: 1px solid var(--bg-blockquote-border) ;
 }
-
 blockquote {
     background: var(--bg-blockquote);
     border-left: 10px solid var(--bg-blockquote-border);
@@ -132,115 +188,43 @@ blockquote p {
 }
 
 /* IMAGES ON PAGES ----------- */
-
 .left {
     float: left;
 }
-
 .right {
     float: right;
-
 }
-
 .left, .right {
     width: 40%;
-    margin: .8em;
+    margin: .55rem;
 }
-
 @media (max-width: 750px) {
     .left, .right {
         float: none;
         width: 90%;
-        margin: .8em auto;
-    }
-}
-
-/* SINGLE PAGE'S HEADER ------ */
-
-header.single {
-    background: var(--bg-header);
-    padding:4.5rem 1.5rem 2rem;
-    margin:-3.7em calc(0px - (50vw - 50%)) 5em;
-    padding-left:calc(50vw - 50%);
-    padding-right:calc(50vw - 50%);
-    border-bottom:1.5px solid var(--bg-header-outline);
-}
-
-header.single h1 {
-    margin: .15em 0 .75em;
-    border: none;
-    font-weight: bold;
-    font-size: 2.3em;
-    padding: 0;
-}
-
-header.single h3 {
-    font-size: 1.4em;
-    border: none;
-    padding: 0;
-}
-
-header.single h4 + h4 {
-    margin: 0;
-}
-
-/* LIST PAGE'S HEADER -------- */
-
-header.list {
-    text-align: center;
-    margin-bottom: 3em;
-}
-
-header.list h1 {
-    border: none;
-}
-
-/* LATEST POSTS -------------- */
-
-nav.latest {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-nav.latest h2 {
-    margin-top: .4em;
-}
-
-nav.latest section {
-    flex: 50%;
-}
-
-@media (max-width: 750px) {
-    nav.latest {
-        flex-direction: column;
+        margin: .55rem auto;
     }
 }
 
 /* SOCIAL -------------------- */
-
 ul.social {
-    padding-left: 2em;
+    padding-left: 1.5em;
     list-style-type: none;
 }
-
 ul.social a {
     display: inline-flex;
     align-items: center;
 }
-
 ul.social svg {
     color: var(--tx-body);
     height: 21px;
     width: 21px;
 }
-
 ul.social span {
     padding-left: .5em;
 }
 
 /* FOOTER -------------------- */
-
 footer {
     display: flex;
     flex-direction: column;
@@ -250,17 +234,13 @@ footer {
     gap: 1em;
     clear: both;
 }
-
 footer a {
     display: inline-flex;
     align-items: center;
-    padding: .5em;
+    padding: .5rem;
 }
-
-footer svg {
-    color: orange;
-    height: 21px;
-    width: 21px;
+footer svg { /*rss icon*/
+    color: orange; 
 }
 
 /* BREADCRUMB 
