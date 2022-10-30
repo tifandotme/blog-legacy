@@ -8,7 +8,7 @@
     {{ end }}
     <footer>
         {{ if not .IsHome }}<a href="{{ .Site.BaseURL }}">Home</a>{{ end }}
-        <a href="{{ .Site.BaseURL }}index.xml" target="_blank">{{ partial "icons/rss.html" . }}<span hidden>RSS</span></a>
+        <a href="{{ .Site.BaseURL }}index.xml" aria-label="RSS">{{ partial "icons/rss.html" . }}</a>
     </footer>
 </body>
 </html>
