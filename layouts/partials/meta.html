@@ -10,6 +10,8 @@
 <link rel="icon" type="image/png" href="/favicon.png" />
 {{ $style := resources.Get "/style.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="all">
+{{ $style := resources.Get "/syntax-highlighting.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="all">
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}

@@ -4,7 +4,13 @@ title = 'Tifan Dwi Avianto'
 pluralizelisttitles = 'false'
 enableRobotsTXT = 'true'
 enableGitInfo = 'true'
+enableEmoji = 'true'
 # googleAnalytics = 'G-GYS38JV7G0'
+markup.highlight.noClasses = 'false'
+markup.highlight.lineNos = 'true'
+markup.highlight.lineNumbersInTable = 'false'
+markup.highlight.guessSyntax = 'true'
+markup.goldmark.renderer.unsafe = 'true'
 [params]
     author = 'Tifan Dwi Avianto'
     description = "Tifan's blog containing tech and personal-related posts"

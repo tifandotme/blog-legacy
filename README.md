@@ -1,10 +1,17 @@
 # tifan.me
-## My personal site
+**tifan.me** is a blog with contents ranging from tech to personal.
 
-# TODO
-- Add RSS icon
-- Minify CSS
-- Post more content
-- dark/light mode DONE
+## Manual
 
-https://twitter.com/lukencode/status/1289427747396177921?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1289427747396177921%7Ctwgr%5E2aa3099eb9d0ee5e16dc080750bfd854a0a3174a%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Flukelowrey.com%2Fcss-variable-theme-switcher%2F
+### Syntax Highlighting
+
+```go
+<code>
+```
+
+- After fenced code, specify language, otherwise no syntax highlighting.
+- [List of language code](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)
+
+### Emoji! :beer:
+
+- [Emoji Cheat Cheet](https://www.webfx.com/tools/emoji-cheat-sheet/)

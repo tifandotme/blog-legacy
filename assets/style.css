@@ -1,7 +1,8 @@
-/* DEBUG --------------------- 
+/*
+
+@media (prefers-color-scheme: dark){
+}
 *:hover {outline:1px blue solid;}
-GUIDELINE
-P, H, ANY BLOCK
 
 margin-top=1em
 +---------------+
@@ -11,30 +12,19 @@ margin-top=1em
 margin-bottom=.25em (1em if adjacent is same type)
 
 */
-/* VARIABLES ----------------- */
-:root {
-    --tx-body: #1a1a1a;
-    --bg-body: #fff;
-    --tx-link: #1a0dab;
-    --bg-header: #e8e8e8;
-    --bg-header-outline: #d2d2d2;
-    --bg-blockquote: #e8e8e8;
-    --bg-blockquote-border: #a8a8a8;
-}
-@media (prefers-color-scheme: dark){
-    :root {
-        --tx-body: #e3e3e3;
-        --bg-body: #000;
-        --tx-link: #2c94ff;
-        --bg-header: #111;
-        --bg-header-outline: #222;
-        --bg-code-inline: #2b2b2b;
-        --bg-blockquote: #1a1a1a;
-        --bg-blockquote-border: #353535;
-    }
-}
 
 /* GLOBALS ------------------- */
+:root {
+    --tx-body: #e3e3e3;
+    --bg-body: #000;
+    --tx-link: #2c94ff;
+    --bg-header: #111;
+    --bg-header-outline: #222;
+    --bg-code: #1a1a1a;
+    --bg-code-outline: #222;
+    --bg-blockquote: #1a1a1a;
+    --bg-blockquote-border: #353535;
+}
 figure, blockquote, dl, dd {
   margin: 0;
 }
@@ -44,7 +34,7 @@ body {
     margin:0 auto;
     max-width: 750px;
     padding: 10px;
-    font: 1.1rem/calc(1ex / 0.32) "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
+    font: 1.125rem/calc(1ex / 0.32) "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
 }
 @media print{
     body{
@@ -58,15 +48,39 @@ img, picture {
     max-width: 100%;
     display: block;
 }
-pre {
-    overflow: auto;
-}
 input, button, textarea, select {
     font: inherit;
 }
 svg {
     height: 21px;
     width: 21px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background: var(--bg-header-outline);
+}
+* {
+  box-sizing: border-box;
+}
+table {
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: auto;
+    overflow-x: auto;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+}
+table thead th {
+    background: var(--bg-code);
+    border: 1px solid var(--bg-code-outline);
+    padding: 5px;
+}
+table tbody td {
+    border: 1px solid var(--bg-code-outline);
+    padding: 5px;
 }
 
 /* HYPERLINK ----------------- */
@@ -76,6 +90,10 @@ a {
 }
 a:hover,a:visited:hover {
     text-decoration: underline
+}
+a[target="_blank"]::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%232c94ff' class='bi bi-box-arrow-up-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+    margin: 0 3px 0 5px;
 }
 
 /* HEADINGS ------------------ */
@@ -107,10 +125,10 @@ h2 {
     font-size: 1.65rem;
 }
 h3 {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
 }
 h4 {
-    font-size: 1.1rem; /* same as body */
+    font-size: 1.125rem; /* same as body */
 }
 h5 {
     font-size: 1rem; 
@@ -168,10 +186,21 @@ nav.latest section {
 
 /* CODE BLOCK ---------------- */
 code {
-    background: var(--bg-blockquote);
+    background: var(--bg-code);
     padding: .125rem .25rem;
-    border-radius: .25em;   
-    border: 1px solid var(--bg-blockquote-border) ;
+    border-radius: .25rem;   
+    border: 1px solid var(--bg-code-outline);
+}
+pre {
+    border: 1px solid var(--bg-code-outline);
+    border-radius: .5rem;
+    padding: .5em;
+    overflow: auto;
+}
+pre > code {
+    padding: 0;
+    border: 0;
+    font-size: 1rem;
 }
 blockquote {
     background: var(--bg-blockquote);

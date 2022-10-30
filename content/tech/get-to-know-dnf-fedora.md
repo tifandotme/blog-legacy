@@ -1,7 +1,7 @@
 +++
 title = 'Guide on mastering DNF on Fedora'
 description = 'General knowledge on DNF package manager for daily usage'
-tags = ['tech1','tech2','tech3']
+tags = ['linux']
 date = 2022-10-28T07:39:43+07:00
 +++
 
@@ -20,7 +20,7 @@ date = 2022-10-28T07:39:43+07:00
 
 Here is my own config:
 
-```Shell
+```shell
 tee -a /etc/dnf/dnf.conf <<EOF > /dev/null
 defaultyes=True
 keepcache=True
@@ -65,6 +65,14 @@ I use a lot of shorthands, such as in for install.
 - `dnf hist userinstalled` (history of user installed packages)
 - `dnf clean all` (remove cache)
 
+# asd
 
-
-
+```go
+msg := "hi"
+select {
+case messages <- msg:
+    fmt.Println("sent message", msg) fmt.Println("sent message", msg)fmt.Println("sent message", msg)
+default:
+    fmt.Println("no message sent")
+}
+```
