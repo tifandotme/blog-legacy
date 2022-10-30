@@ -6,9 +6,9 @@
     <header class="list">
         <h1 class="bare fluid">
             {{ if .RegularPages }}
-                {{ .Title }} Posts
+                {{ .Title | title }} Posts
             {{ else }}
-                {{ .Title }}
+                {{ .Title | title }}
             {{ end }}
         </h1>
     </header>

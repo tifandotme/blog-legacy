@@ -1,7 +1,7 @@
 +++
 title = 'Markdown Lorem Ipsum'
 description = 'Lorem ipsum dolor sit amet'
-tags = ['']
+tags = ['tech2','tech3']
 date = 2022-10-29T20:29:39+07:00
 +++
 

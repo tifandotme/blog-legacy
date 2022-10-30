@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+{{ partial "back.html" . }}
+
+<article>
+    <header class="list">
+        <h1 class="bare fluid">
+            {{ if .RegularPages }}
+                Posts with {{ .Title | title }} Tag
+            {{ else }}
+                All Tags
+            {{ end }}
+        </h1>
+    </header>
+
+    {{ .Content }}
+
+    {{ if not .RegularPages}}
+    <section style="text-align: center">
+        {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            <span style="margin: 0 .5em"><a href={{ .RelPermalink }} title="All pages with tag {{$name}}">{{$name}}</a><sup>{{$cnt}}</sup></span>
+            {{end}}
+        {{end}}
+    </section>
+    {{ end }}
+
+    {{ if .RegularPages }}
+        <nav>
+            {{ range .Pages.GroupByDate "2006" "asc" }}
+            <h2>{{ .Key }}</h2>
+            <ul>
+                {{ range .Pages.ByTitle }}
+                <li>
+                    {{ .Date.Format "Jan 2" }} <a href="{{ .Permalink }}">{{ .Title | title }}</a>            
+                </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </nav>
+    {{ end }}
+</article>
+
+{{ end }}

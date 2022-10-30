@@ -15,9 +15,7 @@ margin-bottom=.25em (1em if adjacent is same type)
 :root {
     --tx-body: #1a1a1a;
     --bg-body: #fff;
-
     --tx-link: #1a0dab;
-
     --bg-header: #e8e8e8;
     --bg-header-outline: #d2d2d2;
     --bg-blockquote: #e8e8e8;
@@ -27,9 +25,7 @@ margin-bottom=.25em (1em if adjacent is same type)
     :root {
         --tx-body: #e3e3e3;
         --bg-body: #000;
-
         --tx-link: #2c94ff;
-
         --bg-header: #111;
         --bg-header-outline: #222;
         --bg-code-inline: #2b2b2b;
@@ -138,7 +134,7 @@ nav.back a {
 /* SINGLE PAGE'S HEADER ------ */
 header.single {
     background: var(--bg-header);
-    padding:5rem calc(50vw - 50%) 2rem;
+    padding:5rem calc(50vw - 50%) 1rem;
     margin:-5rem calc(0px - (50vw - 50%)) 4rem;
     border-bottom:1.5px solid var(--bg-header-outline);
 }
@@ -230,7 +226,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4em;
+    margin-top: 2rem;
     gap: 1em;
     clear: both;
 }

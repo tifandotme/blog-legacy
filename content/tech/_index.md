@@ -1,4 +1,3 @@
 +++
-title = "Tech"
-tags = ["index"]
+title = 'Tech'
 +++

@@ -1,7 +1,7 @@
 +++
 title = 'Guide on mastering DNF on Fedora'
 description = 'General knowledge on DNF package manager for daily usage'
-tags = ['linux']
+tags = ['tech1','tech2','tech3']
 date = 2022-10-28T07:39:43+07:00
 +++
 

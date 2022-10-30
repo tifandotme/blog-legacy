@@ -1,4 +1,3 @@
 +++
-title = "Personal"
-tags = ["index"]
+title = 'Personal'
 +++
