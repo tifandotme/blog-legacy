@@ -214,6 +214,14 @@ blockquote p {
 }
 
 /* IMAGES ON PAGES ----------- */
+figure {
+    margin: .55rem;
+}
+figure figcaption {
+    text-align: center;
+    color: #9b9b9b;
+    margin-top: -.5rem;
+}
 .left {
     float: left;
 }

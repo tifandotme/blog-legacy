@@ -10,13 +10,13 @@
         {{ end }}
         <h4 aria-hidden="true">Published: {{ dateFormat "Jan 2, 2006" .PublishDate }} / <span style="white-space: nowrap">Modified: {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></h4>
         <p aria-hidden="true" style="margin: 1em 0 0">
-        {{ with .Params.tags }}
-            {{ if ge (len .) 1 }}
-                {{ range . }}
-                    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{ . }}</a>
+            {{ with .Params.tags }}
+                {{ if ge (len .) 1 }}
+                    {{ range . }}
+                        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{ . }}</a>
+                    {{ end }}
                 {{ end }}
             {{ end }}
-        {{ end }}
         </p>
     </header>
     {{ .Content }} 
