@@ -4,7 +4,7 @@ title = 'Tifan Dwi Avianto'
 pluralizelisttitles = 'false'
 enableRobotsTXT = 'true'
 enableGitInfo = 'true'
-googleAnalytics = 'G-GYS38JV7G0'
+# googleAnalytics = 'G-GYS38JV7G0'
 [params]
     author = 'Tifan Dwi Avianto'
     description = "Tifan's blog containing tech and personal-related posts"
