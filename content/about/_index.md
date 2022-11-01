@@ -35,12 +35,13 @@ Despite MCU overshadowing other action movies. I like other movies too. Here's m
 
 # Contact
 
-Contact details and socials are on the homepage. Feel free to reach me.
+Contact details and socials are on the homepage.
 
 # About this site
 
-- Free and open source. [Hosted on GitHub](https://github.com/tifandotme/tifan.me).
+- [Hosted on GitHub](https://github.com/tifandotme/tifan.me).
 - Built with Hugo.
 - I aim for simplicity and functionality, hence the minimal look.
 - It also need to be **blazingly fasttt**.
 - **RSS** is available on the bottom of every pages.
+- Find typos/grammar mistakes? Please edit the corresponding page.

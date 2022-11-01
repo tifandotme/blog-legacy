@@ -5,6 +5,9 @@
     {{block "main" .}}
     {{end}}
     <footer>
+        {{- if .IsPage}}
+        <a href="https://github.com/tifandotme/tifan.me/edit/main/content/{{.File.Path}}" style="font-size: 1rem; align-self: flex-start; padding: 0;" target="_blank">Edit post</a>
+        {{- end}}
         {{if not .IsHome}}<a href="{{.Site.BaseURL}}">Home</a>{{end}}
         <a href="{{.Site.BaseURL}}index.xml">{{- partial "icons/rss.html" . -}}</a>
     </footer>
