@@ -1,39 +1,35 @@
-{{ define "main" }}
+{{define "main" -}}
+    <article>
+        <p style="margin: 1.5rem 0 0">Hi! I'm <a href="/about"><strong>Tifan</strong></a>. An aspiring software developer living in Indonesia. Thank you for visiting my blog.</p>
+        {{.Content -}}
 
-<article>
-    <p style="margin: 1.25rem 0 0">Hi! I'm <strong><a href="/about">Tifan</a></strong>. An aspiring software developer living in Indonesia. Thank you for visiting my blog.</p>
-    
-    {{ .Content }}
+        <nav class="latest-posts">
+            <section>
+                <h1>Latest Tech Posts</h1>
+                <ol>
+                    {{- range (first 10 (where .Site.RegularPages "Section" "=" "tech"))}}
+                    <li><a href="{{.RelPermalink}}">{{.Title | title}}</a>{{if .Description}} &mdash; {{.Description | truncate 100}}{{end}}</li>
+                    {{- end}}
+                </ol>
+                <span><a href="/tech">Show more..</a></span>
+            </section>
+            <section>
+                <h1>Latest Personal Posts</h1>
+                <ol>
+                    {{- range (first 10 (where .Site.RegularPages "Section" "=" "personal"))}}
+                    <li><a href="{{.RelPermalink}}">{{.Title | title}}</a>{{if .Description}} &mdash; {{.Description | truncate 100}}{{end}}</li>
+                    {{- end}}
+                </ol>
+                <span><a href="/personal">Show more..</a></span>
+            </section>
+        </nav>
 
-    <nav class="latest">
-        <section>
-            <h2>Latest Tech Posts</h2>
-            <ol>
-                {{ range (first 10 (where .Site.RegularPages "Section" "=" "tech")) }}
-                <li><a href="{{.RelPermalink}}">{{ .Title | title }}</a>{{ if .Description }} &mdash; {{ .Description | truncate 100 }}{{ end }}</li>
-                {{ end }}
-            </ol>
-            <span style="padding-left: 2.5rem; font-weight: bold"><a href="/tech">Show more..</a></span>
-        </section>
-
-        <section>
-            <h2>Latest Personal Posts</h2>
-            <ol>
-                {{ range (first 10 (where .Site.RegularPages "Section" "=" "personal")) }}
-                <li><a href="{{.RelPermalink}}">{{.Title | title }}</a>{{ if .Description }} &mdash; {{ .Description }}{{ end }}</li>
-                {{ end }}
-            </ol>
-            <span style="padding-left: 2.5rem; font-weight: bold"><a href="/personal">Show more..</a></span>
-        </section>
-    </nav>
-
-    <h2>Contact & Socials</h2>
-    <ul class="social">
-        <li><a href="mailto:hello@tifan.me">{{ partial "icons/email.html" . }}<span>hello@tifan.me</span></a></li>
-        <li><a href="https://github.com/tifandotme" target="_blank">{{ partial "icons/github.html" . }}<span>GitHub</span></a></li>
-        <li><a href="https://twitter.com/tifandotme" target="_blank">{{ partial "icons/twitter.html" . }}<span>Twitter</span></a></li>
-        <li><a href="https://www.linkedin.com/in/tifandotme" target="_blank">{{ partial "icons/linkedin.html" . }}<span>LinkedIn</span></a></li>
-    </ul>
-</article>
-
-{{ end }}
+        <h1>Contact & Socials</h1>
+        <ul class="social">
+            <li><a href="mailto:hello@tifan.me">{{- partial "icons/email.html" . -}}<span>hello@tifan.me</span></a></li>
+            <li><a href="https://github.com/tifandotme" target="_blank">{{- partial "icons/github.html" . -}}<span>GitHub</span></a></li>
+            <li><a href="https://twitter.com/tifandotme" target="_blank">{{- partial "icons/twitter.html" . -}}<span>Twitter</span></a></li>
+            <li><a href="https://www.linkedin.com/in/tifandotme" target="_blank">{{- partial "icons/linkedin.html" . -}}<span>LinkedIn</span></a></li>
+        </ul>
+    </article>
+{{- end}}

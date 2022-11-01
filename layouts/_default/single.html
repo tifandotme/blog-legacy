@@ -1,25 +1,24 @@
-{{ define "main" }}
-
-{{ partial "back.html" . }}
-
-<article>
-    <header class="single">
-        <h1 class="bare fluid">{{ .Title | title }}</h1>
-        {{ if .Description }}
-            <h3 class="bare" aria-hidden="true">{{ .Description }}</h3>
-        {{ end }}
-        <h4 aria-hidden="true">Published: {{ dateFormat "Jan 2, 2006" .PublishDate }} / <span style="white-space: nowrap">Modified: {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></h4>
-        <p aria-hidden="true" style="margin: 1em 0 0">
-            {{ with .Params.tags }}
-                {{ if ge (len .) 1 }}
-                    {{ range . }}
+{{define "main" -}}
+    {{partial "back-nav.html" .}}
+    <article>
+        <header class="single">
+            <h1 class="bare fluid">{{.Title | title}}</h1>
+            {{- if .Description}}
+            <h3 aria-hidden="true">{{.Description}}</h3>
+            {{end -}}
+            <h4 aria-hidden="true">Published: {{ dateFormat "Jan 2, 2006" .PublishDate }} / <span style="white-space: nowrap">Modified: {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></h4>
+            <p aria-hidden="true" style="margin: 1em 0 0">
+            {{with .Params.tags -}}
+                {{if ge (len .) 1 -}}
+                    {{range . -}}
                         <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{ . }}</a>
-                    {{ end }}
-                {{ end }}
-            {{ end }}
-        </p>
-    </header>
-    {{ .Content }} 
-</article>
+                    {{- end}}
+                {{- end}}
+            {{- end}}
+            </p>
+        </header>
 
-{{ end }}
+        {{.Content}}
+
+    </article>
+{{- end}}

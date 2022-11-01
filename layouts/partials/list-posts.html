@@ -1,0 +1,17 @@
+<!--
+used in:
+_default/list.html
+tags/list.html
+-->
+        {{- if .RegularPages}}
+        <nav>
+            {{- range .Pages.GroupByDate "2006" "asc"}}
+            <h2>{{.Key}}</h2>
+            <ul>
+                {{- range .Pages.ByTitle}}
+                <li>{{.Date.Format "Jan 2 "}}<a href="{{.Permalink}}">{{.Title | title}}</a></li>
+                {{- end}}
+            </ul>
+            {{- end}}
+        </nav>
+        {{- end}}

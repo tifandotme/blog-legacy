@@ -1,7 +1,7 @@
 +++
 title = 'About'
-description = "About the blog's author"
-aliases = ['about-me', 'contact']
+description = "Find out more about the blog's author"
+# aliases = ['about-me', 'contact']
 +++
 
 Tifan Dwi Avianto is my full name. Born in [Tegal, Central Java, Indonesia](https://en.wikipedia.org/wiki/Tegal). I am currently pursuing a Bachelor Degree in Informatics (or Computer Science if you prefer).
@@ -9,8 +9,6 @@ Tifan Dwi Avianto is my full name. Born in [Tegal, Central Java, Indonesia](http
 {{< figure src="potrait.jpg" alt="Author potrait" class="right">}}
 
 # History
-
-Love tinkering with with technology.
 
 1. My first computer was a Pentium 4, custom PC with Windows XP on it.
 2. Long windows users, until I learn about FOSS and start to lean to it.

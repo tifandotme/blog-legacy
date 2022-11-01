@@ -1,7 +1,7 @@
 +++
 title = 'Google Analytics Alternative: Microanalytics'
 description = 'A look at another privacy-focused and lightweight analytics'
-tags = ['google']
+tags = ['SEO']
 date = 2022-10-30T22:39:39+07:00
 +++
 
@@ -19,5 +19,5 @@ Above are results of two different web analytics provider. You can see the drast
 
 # Microanalytics
 
-[Microanalytics](https://microanalytics.io) is a great alternative for anyone that just want lightweight and privacy-focused analytics without unnecessary features that would otherwise be unutilized. It also has a generously free until a maximum of 5K pageviews a month.
+[Microanalytics](https://microanalytics.io) is a great alternative for anyone that just want lightweight and privacy-focused analytics without unnecessary features that would otherwise be unutilized. It also has a generous free plan until a maximum of 5K pageviews a month.
 

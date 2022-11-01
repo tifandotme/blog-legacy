@@ -1,10 +1,8 @@
 +++
-title = '{{ replace .Name "-" " " | title }}'
+title = '{{replace .Name "-" " " | title}}'
 description = ''
 tags = ['']
-date = {{ .Date }}
+date = {{.Date}}
 draft = true
 +++
-
-
 

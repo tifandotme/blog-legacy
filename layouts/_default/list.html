@@ -1,34 +1,12 @@
-{{ define "main" }}
+{{define "main" -}}
+    {{partial "back-nav.html" .}}
+    <article>
+        <header class="list">
+            <h1 class="bare fluid">{{.Title | title}}{{if .RegularPages}} Posts{{end}}</h1>
+        </header>
 
-{{ partial "back.html" . }}
+        {{.Content}}
 
-<article>
-    <header class="list">
-        <h1 class="bare fluid">
-            {{ if .RegularPages }}
-                {{ .Title | title }} Posts
-            {{ else }}
-                {{ .Title | title }}
-            {{ end }}
-        </h1>
-    </header>
-
-    {{ .Content }}
-
-    {{ if .RegularPages }}
-	    <nav>
-	        {{ range .Pages.GroupByDate "2006" "asc" }}
-	        <h2>{{ .Key }}</h2>
-	        <ul>
-	            {{ range .Pages.ByTitle }}
-	            <li>
-	                {{ .Date.Format "Jan 2" }} <a href="{{ .Permalink }}">{{ .Title | title }}</a>            
-	            </li>
-	            {{ end }}
-	        </ul>
-	        {{ end }}
-	    </nav>
-    {{ end }}
-</article>
-
-{{ end }}
+        {{partial "list-posts.html" .}}
+    </article>
+{{- end}}
