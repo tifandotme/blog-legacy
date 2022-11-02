@@ -188,7 +188,8 @@ figure.left, figure.right {
 @media (max-width: 750px) {
     figure.left, figure.right {
         float: none;
-        width: 100%;
+        max-width: 500px;
+        width: 80%;
         margin: 0 auto;
     }
 }
