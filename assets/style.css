@@ -237,8 +237,6 @@ ul.social a {
 }
 ul.social svg {
     color: var(--tx-body);
-    height: 21px;
-    width: 21px;
 }
 ul.social span {
     padding-left: .5rem;
@@ -278,6 +276,8 @@ footer a {
 }
 footer svg { /*rss icon*/
     color: orange;
+    height: 19px;
+    width: 19px;
 }
 
 /* BREADCRUMB 
