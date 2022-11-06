@@ -1,8 +1,10 @@
-+++
-title = 'README'
-description = 'README.md content from https://github.com/tifandotme/tifan.me'
-skipSitemap = true
-+++
+---
+title : 'README'
+description : 'README.md content from https://github.com/tifandotme/tifan.me'
+skipSitemap : true
+---
+
+[![Build status](https://github.com/tifandotme/tifan.me/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/tifandotme/tifan.me/actions/workflows/gh-pages.yml)
 
 # About This Site
 
