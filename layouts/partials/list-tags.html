@@ -1,0 +1,14 @@
+<!--
+used in:
+_default/list.html
+taxonomy/list.html
+-->
+        {{$isTech := (cond (eq .Section "tech" "techtags") true false) -}}
+        <section style="text-align: center">
+            {{- range $name, $taxonomy := (cond $isTech .Site.Taxonomies.techtags .Site.Taxonomies.personaltags)}} 
+            {{$cnt := .Count}}
+            {{- with $.Site.GetPage (printf "/%s/%s" (cond $isTech "techtags" "personaltags") $name) -}}
+            <span style="margin: 0 .5em"><a href={{ .RelPermalink }} title="All pages with tag {{$name}}">{{$name}}</a><sup>{{$cnt}}</sup></span>
+            {{- end -}}
+            {{end}}
+        </section>

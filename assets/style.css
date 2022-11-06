@@ -22,7 +22,7 @@ https://necolas.github.io/normalize.css/latest/normalize.css
     --bg-heading-border: #333;
 
     --bg-code: #1a1a1a; /*used in table aswell*/
-    --bg-code-outline: #333;
+    --bg-code-outline: #242424;
 
     --bg-blockquote: #1e1e0f;
     --bg-blockquote-border: #666633;
@@ -47,6 +47,10 @@ input, button, textarea, select {
 p, ol, ul {
     margin: 1em 0;
 }
+li > ul, li > ol {
+    margin: 0;
+}
+
 img, picture {
     max-width: 100%;
     display: block;
@@ -140,8 +144,8 @@ h6 { /* probably unused */
 /* CODE BLOCK ---------------- */
 code { /* inline code  */
     background: var(--bg-code);
-    padding: .125rem .25rem;
-    border-radius: .25rem;   
+    padding: .025rem .2rem;
+    border-radius: .25rem;
     border: 1px solid var(--bg-code-outline);
 }
 pre { /* fenced code block */

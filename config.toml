@@ -14,4 +14,8 @@ markup.goldmark.renderer.unsafe = 'true'
     author = 'Tifan Dwi Avianto'
     description = "Tifan's blog containing tech and personal-related posts"
 [taxonomies]
-    tag = 'tags'
+    techtag = 'techtags'
+    personaltag = 'personaltags'
+[permalinks]
+    techtags = '/tech/tags/:title'
+    personaltags = '/personal/tags/:title'

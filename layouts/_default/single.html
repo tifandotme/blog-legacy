@@ -6,15 +6,22 @@
             {{- if .Description}}
             <h3 aria-hidden="true">{{.Description}}</h3>
             {{end -}}
-            <h4 aria-hidden="true">Published: {{ dateFormat "Jan 2, 2006" .PublishDate }} / <span style="white-space: nowrap">Modified: {{ dateFormat "Jan 2, 2006" .Lastmod }}</span></h4>
+            <h4 aria-hidden="true">Published: {{dateFormat "Jan 2, 2006" .PublishDate}} / <span style="white-space: nowrap">Modified: {{dateFormat "Jan 2, 2006" .Lastmod}}</span></h4>
             <p aria-hidden="true" style="margin: 1em 0 0">
-            {{with .Params.tags -}}
+            {{with .Params.techtags -}}
                 {{if ge (len .) 1 -}}
                     {{range . -}}
-                        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{ . }}</a>
+                        <a href="{{$.Site.BaseURL}}tech/tags/{{. | urlize}}/">#{{.}}</a>&nbsp;&nbsp;
                     {{- end}}
                 {{- end}}
-            {{- end}}
+            {{end -}}
+            {{- with .Params.personaltags -}}
+                {{if ge (len .) 1 -}}
+                    {{range . -}}
+                        <a href="{{$.Site.BaseURL}}personal/tags/{{. | urlize}}/">#{{.}}</a>&nbsp;&nbsp;
+                    {{- end}}
+                {{- end}}
+            {{end -}}
             </p>
         </header>
 

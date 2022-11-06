@@ -2,12 +2,26 @@
 used in:
 _default/single.html
 _default/list.html
-tags/list.html
+taxonomy/list.html
 -->
+{{- if eq .Section "techtags" -}}
+    {{.Scratch.Set "url" "/tech"}}
+    {{.Scratch.Set "text" "Tech"}}
+{{else if eq .Section "personaltags"}}
+    {{.Scratch.Set "url" "/personal"}}
+    {{.Scratch.Set "text" "Personal"}}
+{{else if .IsPage}}
+    {{.Scratch.Set "url" .Parent.RelPermalink}}
+    {{.Scratch.Set "text" .Parent.Title}}
+{{else if .IsSection}}
+    {{.Scratch.Set "url" .Site.BaseURL}}
+    {{.Scratch.Set "text" "Home"}}
+{{- end}}
+
     <nav class="back-nav">
-        <a href="{{.Parent.RelPermalink}}">
+        <a href="{{.Scratch.Get `url`}}">
             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            <span>{{cond .IsPage .Parent.Title (cond (eq .Kind "term") "All Tags" "Home")}}</span>
+            <span>{{.Scratch.Get "text"}}</span>
         </a>
     </nav>
 <!--

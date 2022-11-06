@@ -10,6 +10,16 @@
         {{- end}}
         {{if not .IsHome}}<a href="{{.Site.BaseURL}}">Home</a>{{end}}
         <a href="{{.Site.BaseURL}}index.xml">{{- partial "icons/rss.html" . -}}</a>
+        <!-- for debugging
+        Page Variables
+        .Title = {{.Title}} <br>
+        .Type = {{.Type}} <br>
+        .Section = {{.Section}} <br>
+        .FirstSection = {{.FirstSection}} <br>
+        .Aliases = {{.Aliases}} <br>
+        .BundleType = {{.BundleType}} <br>
+        .Kind = {{.Kind}} <br>
+        -->
     </footer>
 </body>
 </html>

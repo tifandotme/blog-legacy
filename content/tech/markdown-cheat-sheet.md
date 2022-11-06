@@ -1,9 +1,9 @@
 +++
 title = 'Markdown Cheat Sheet'
-description = 'Full markdown cheat sheet. Use this as reference 😀'
-tags = ['markdown','reference']
+description = 'Full markdown cheat sheet. Use this as reference'
+techtags = ['markdown', 'reference']
 date = 2022-10-30T14:05:07+07:00
-draft = true
+draft = false
 +++
 
 | Syntax      | Description | Test Text  markdown   |
