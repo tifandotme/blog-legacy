@@ -2,7 +2,10 @@
     {{partial "back-nav.html" .}}
     <article>
         <header class="list">
-            <h1 class="bare fluid">{{.Title | title}}{{if .RegularPages}} Posts{{end}}</h1>
+            <h1 class="bare fluid">
+            {{if eq .Section "tech"}}👨‍💻{{else if eq .Section "personal"}}🏖️{{end}}
+            {{.Title | title}}{{if .RegularPages}} Posts{{end}}
+            </h1>
         </header>
 
         {{.Content}}
