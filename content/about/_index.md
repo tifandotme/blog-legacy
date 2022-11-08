@@ -6,7 +6,9 @@ description = "Find out more about the blog's author"
 
 Tifan Dwi Avianto is my full name. Born in [Tegal, Central Java, Indonesia](https://en.wikipedia.org/wiki/Tegal). I am currently pursuing a Bachelor Degree in Informatics (or Computer Science if you prefer).
 
+<!---
 {{< figure src="potrait.webp" alt="Author potrait" class="right">}}
+--->
 
 # History
 
