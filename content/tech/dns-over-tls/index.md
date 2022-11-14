@@ -3,7 +3,6 @@ title = 'DNS Over TLS to Prevent ISP from Blocking Websites'
 description = 'Encrypt DNS queries for a more free internet 🔓'
 techtags = ['linux']
 date = 2022-11-14T20:38:38+07:00
-draft = true
 +++
 
 # DNS Over TLS
