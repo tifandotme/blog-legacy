@@ -1,6 +1,6 @@
 +++
 title = 'Google Analytics Alternative: Microanalytics'
-description = 'A look at another privacy-focused and lightweight analytics'
+description = 'A look at another privacy-focused and lightweight analytics 📊'
 techtags = ['SEO', 'google']
 date = 2022-10-30T22:39:39+07:00
 +++
