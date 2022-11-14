@@ -9,7 +9,7 @@
         <a href="https://github.com/tifandotme/tifan.me/edit/main/content/{{.File.Path}}" style="align-self: flex-end; padding: 0;" target="_blank">Edit post</a>
         {{- end}}
         {{if not .IsHome}}<a href="{{.Site.BaseURL}}">Home</a>{{end}}
-        <a href="{{.Site.BaseURL}}index.xml">{{- partial "icons/rss.html" . -}}</a>
+        {{if .IsHome }}<a href="{{.Site.BaseURL}}index.xml">{{- partial "icons/rss.html" . -}}</a>{{end}}
         <!-- for debugging
         Page Variables
         .Title = {{.Title}} <br>

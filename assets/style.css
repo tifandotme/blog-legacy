@@ -47,6 +47,10 @@ input, button, textarea, select {
 p, ol, ul {
     margin: 1em 0;
 }
+ol, ul {
+    overflow: hidden;
+    padding-left: 1.75rem;
+}
 li > ul, li > ol {
     margin: 0;
 }
