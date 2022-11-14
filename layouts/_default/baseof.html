@@ -9,7 +9,15 @@
         <a href="https://github.com/tifandotme/tifan.me/edit/main/content/{{.File.Path}}" style="align-self: flex-end; padding: 0;" target="_blank">Edit post</a>
         {{- end}}
         {{if not .IsHome}}<a href="{{.Site.BaseURL}}">Home</a>{{end}}
-        {{if .IsHome }}<a href="{{.Site.BaseURL}}index.xml">{{- partial "icons/rss.html" . -}}</a>{{end}}
+        {{if .IsHome -}}
+            <a href="{{.Site.BaseURL}}index.xml">{{- partial "icons/rss.html" . -}}</a>
+        {{- else if .IsSection -}}
+            {{- if eq .Section "tech" -}}
+                <a href="{{.Site.BaseURL}}tech/index.xml">{{- partial "icons/rss.html" . -}}</a>
+            {{- else if eq .Section "personal" -}}
+                <a href="{{.Site.BaseURL}}personal/index.xml">{{- partial "icons/rss.html" . -}}</a>
+            {{- end -}}
+        {{end -}}
         <!-- for debugging
         Page Variables
         .Title = {{.Title}} <br>
@@ -19,6 +27,7 @@
         .Aliases = {{.Aliases}} <br>
         .BundleType = {{.BundleType}} <br>
         .Kind = {{.Kind}} <br>
+        {{.RelPermalink}}
         -->
     </footer>
 </body>
