@@ -1,10 +1,10 @@
-+++
-title = 'I Left My Job and Gained Confidence'
-description = 'I gained confidence after I proposed to resign at my job.'
-personaltags = ['diary']
-date = 2022-11-09T19:55:43+07:00
-draft = false
-+++
+---
+title : "I Left My Job and Gained Confidence"
+description : "I gained confidence after I proposed to resign at my job."
+personaltags :
+    - diary
+date : 2022-11-09T19:55:43+07:00
+---
 
 # The Event
 

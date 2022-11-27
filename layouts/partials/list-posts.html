@@ -5,10 +5,10 @@ taxonomy/list.html
 -->
         {{- if .RegularPages}}
         <nav>
-            {{- range .RegularPages.GroupByDate "2006" "asc"}}
+            {{- range .RegularPages.GroupByDate "2006" "dsc"}}
             <h2>{{.Key}}</h2>
             <ul>
-                {{- range .Pages.ByTitle}}
+                {{- range .Pages}}
                 <li>{{.Date.Format "Jan 2 "}}<a href="{{.Permalink}}">{{.Title | title}}</a></li>
                 {{- end}}
             </ul>

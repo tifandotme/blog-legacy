@@ -5,7 +5,6 @@ personaltags :
     - psychology
     - bahasa indonesia
 date : 2022-11-26T21:34:17+07:00
-draft : false
 ---
 
 {{< youtube tLteWutitFM >}}
