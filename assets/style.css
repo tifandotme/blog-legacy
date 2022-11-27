@@ -13,7 +13,7 @@ https://necolas.github.io/normalize.css/latest/normalize.css
 /* GLOBALS ------------------- */
 :root {
     --tx-link: #2c94ff;
-    --tx-body: #e3e3e3;
+    --tx-body: #f2f2f2;
     --bg-body: #000;
 
     --bg-header: #111;
@@ -24,8 +24,8 @@ https://necolas.github.io/normalize.css/latest/normalize.css
     --bg-code: #1a1a1a; /*used in table aswell*/
     --bg-code-outline: #242424;
 
-    --bg-blockquote: #000;
-    --bg-blockquote-border: #1c1c1c;
+    --tx-blockquote: #aeaeae;
+    --bg-blockquote-border: #333;
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -58,6 +58,7 @@ li > ul, li > ol {
 img, picture {
     max-width: 100%;
     display: block;
+    margin: 0 auto;
 }
 svg {
     height: 21px;
@@ -123,7 +124,7 @@ h1.bare, h2.bare {
     padding: 0;
 }
 h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
 }
 h1.fluid {
     font-size: clamp(2.15rem, 1rem + 2vw, 2.5rem);
@@ -165,14 +166,18 @@ pre > code {
     line-height: 1.2;
 }
 blockquote {
-    background: var(--bg-blockquote);
-    border-left: 7px solid var(--bg-blockquote-border);
+    border-left: 5px solid var(--bg-blockquote-border);
     margin: 1rem .25rem;
-    padding: 0.5em 10px;
-    font-style: italic;
+    padding: 0 0 0 1em;
+    font-style: normal;
+    color: var(--tx-blockquote);
 }
 blockquote p {
-    display: inline;
+    display: inline-block;
+    margin: 0;
+}
+blockquote p + p {
+    margin-top: 1em;
 }
 
 /* IMAGES ON PAGES ----------- */
@@ -284,7 +289,6 @@ footer {
 footer a {
     display: inline-flex;
     align-items: center;
-    padding: .5rem;
 }
 footer svg { /*rss icon*/
     color: orange;
