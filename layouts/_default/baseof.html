@@ -5,10 +5,11 @@
     {{block "main" .}}
     {{end}}
     <footer>
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="tifandotme" data-lang="en" data-dnt="true" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <span style="align-self: flex-start;">Comments? <a href="https://twitter.com/tifandotme">Tweet</a> or <a href="mailto:hello@tifan.me">email</a> me.</span>
         {{- if .IsPage}}
-        <a href="https://github.com/tifandotme/tifan.me/edit/main/content/{{.File.Path}}" style="align-self: flex-end; padding: 0;" target="_blank">Edit post</a>
+        <section>
+            <span>Comments? <a href="https://twitter.com/intent/tweet?screen_name=tifandotme&url={{.Permalink | safeURL}}" target="blank">Tweet</a> or <a href="mailto:hello@tifan.me">email</a> me.</span>
+            <span><a href="https://github.com/tifandotme/tifan.me/edit/main/content/{{.File.Path}}" target="_blank">Edit post</a></span>
+        </section>
         {{- end}}
         {{if not .IsHome}}<a href="{{.Site.BaseURL}}">Home</a>{{end}}
         {{if .IsHome -}}
