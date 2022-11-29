@@ -7,7 +7,7 @@ personaltags :
 date : 2022-11-26T21:34:17+07:00
 ---
 
-{{< youtube tLteWutitFM >}}
+{{< youtube id="tLteWutitFM" title="Potential: Jordan Peterson at TEDxUofT">}}
 
 > "Potensial" adalah judul dari TEDx Talk oleh Jordan Peterson. Berikut adalah esai dalam Bahasa Indonesia atas topik tersebut.
 
