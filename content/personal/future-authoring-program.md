@@ -8,20 +8,11 @@ date : 2022-11-24T06:40:27+07:00
 draft : true
 ---
 
-<!--
 > Buy the program at [www.selfauthoring.com](https://www.selfauthoring.com/)
--->
-
-> Heads up: Contents other than the answers (in block quote) aren't mine and  taken from the Future Authoring Program. Some answers are heavily personal to my life. But I still intend to make this public for lucky readers who happen to stumble upon my site on the endless sea of Internet. 
-
-# Supplementary Video
-
-{{< youtube tLteWutitFM >}}
 
 # Introduction
 
-Welcome to the Future Authoring component of the Self-Authoring suite. This exercise has been
-designed to allow you to do an in-depth analysis of some of the virtues and faults of your personality
+Welcome to the Future Authoring component of the Self-Authoring suite. This exercise has been designed to allow you to do an in-depth analysis of some of the virtues and faults of your personality
 
 The exercise may take up to five hours to complete. You can come back to the exercise later, and resume your work.
 

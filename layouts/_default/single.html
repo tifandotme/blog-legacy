@@ -7,18 +7,18 @@
             <h3 aria-hidden="true">{{.Description}}</h3>
             {{end -}}
             <h4 aria-hidden="true">Published: {{dateFormat "Jan 2, 2006" .PublishDate}} / <span style="white-space: nowrap">Modified: {{dateFormat "Jan 2, 2006" .Lastmod}}</span></h4>
-            <p style="margin: 1em 0 0">
+            <p>
             {{with .Params.techtags -}}
                 {{if ge (len .) 1 -}}
                     {{range . -}}
-                        <a href="{{$.Site.BaseURL}}tech/tags/{{. | urlize}}/">#{{.}}</a>&nbsp;&nbsp;
+                        <a href="{{$.Site.BaseURL}}tech/tags/{{. | urlize}}/">#{{.}}</a>&emsp;
                     {{- end}}
                 {{- end}}
             {{end -}}
             {{- with .Params.personaltags -}}
                 {{if ge (len .) 1 -}}
                     {{range . -}}
-                        <a href="{{$.Site.BaseURL}}personal/tags/{{. | urlize}}/">#{{.}}</a>&nbsp;&nbsp;
+                        <a href="{{$.Site.BaseURL}}personal/tags/{{. | urlize}}/">#{{.}}</a>&emsp;
                     {{- end}}
                 {{- end}}
             {{end -}}
@@ -26,6 +26,10 @@
         </header>
 
         {{.Content}}
-
+        <section class="closing">
+            <span class="dot" aria-hidden="true">•</span>
+            <span>Comments? <a href="https://twitter.com/intent/tweet?screen_name=tifandotme&url={{.Permalink | safeURL}}" target="blank">Tweet</a> or <a href='mailto:hello@tifan.me?subject=Comment on "{{.Title | title}}"'>email</a> me.</span>
+            <span><a href="https://github.com/tifandotme/tifan.me/edit/main/content/{{.File.Path}}" target="blank">Edit post</a></span>
+        </section>
     </article>
 {{- end}}
