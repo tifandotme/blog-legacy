@@ -24,7 +24,7 @@ body {
     margin:0 auto;
     max-width: 750px;
     padding: 10px;
-    font: 1.1rem/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font: 1.1rem/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
 }
 @media print{
     body {max-width:none}
