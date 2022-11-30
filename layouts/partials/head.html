@@ -10,16 +10,18 @@ _default/baseof.html
     {{- if isset .Params "title"}}
     <title>{{.Title | title}} - {{replaceRE "^https?://([^/]+).*" "$1" .Site.BaseURL}}</title>
     {{else}}
-    <title>{{.Title}}</title>
+    <title>{{.Title | title}}</title>
     {{end -}}
     <meta name="description" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
     <meta name="author" content="{{.Site.Params.Author}}">
 
-    <meta property="og:title" content="{{.Title}}">
+    <meta property="og:title" content="{{.Title | title}}">
     <meta property="og:description" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
     <meta property="og:url" content="{{.Permalink}}">
     <meta property="og:type" content="{{if .IsHome}}website{{else}}article{{end}}">
-    <meta property="og:site_name" content="tifan.me" />
+    <meta property="og:site_name" content="tifan.me">
+    <meta property="twitter:site" content="@tifandotme">
+    <meta property="twitter:card" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
 
     {{- $style := resources.Get "/style.css" | minify | fingerprint}}
     <link rel="stylesheet" href="{{$style.Permalink}}" type="text/css" media="all">
