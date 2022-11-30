@@ -20,8 +20,8 @@ _default/baseof.html
     <meta property="og:url" content="{{.Permalink}}">
     <meta property="og:type" content="{{if .IsHome}}website{{else}}article{{end}}">
     <meta property="og:site_name" content="tifan.me">
-    <meta property="twitter:site" content="@tifandotme">
-    <meta property="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tifandotme">
+    <meta name="twitter:card" content="summary">
 
     {{- $style := resources.Get "/style.css" | minify | fingerprint}}
     <link rel="stylesheet" href="{{$style.Permalink}}" type="text/css" media="all">

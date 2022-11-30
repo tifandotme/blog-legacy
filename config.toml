@@ -1,5 +1,5 @@
 baseURL = 'https://tifan.me/'
-languageCode = 'en'
+languageCode = 'en_US'
 title = 'Tifan Dwi Avianto'
 pluralizelisttitles = 'false'
 enableRobotsTXT = 'true'
