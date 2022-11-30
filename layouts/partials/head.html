@@ -14,8 +14,6 @@ _default/baseof.html
     {{end -}}
     <meta name="description" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
     <meta name="author" content="{{.Site.Params.Author}}">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@tifandotme">
     <meta property="og:title" content="{{.Title | title}}">
     <meta property="og:description" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
     {{- $cover := (printf "%scover.jpg" .Site.BaseURL) -}}
@@ -27,6 +25,8 @@ _default/baseof.html
             {{- $cover = (index $images 0).Permalink -}}
         {{end -}}
     {{end}}
+    <meta name="twitter:card" content="{{if $images}}summary_large_image{{else}}summary{{end}}">
+    <meta name="twitter:site" content="@tifandotme">
     <meta property="og:image" content="{{$cover}}">
     <meta property="og:url" content="{{.Permalink}}">
     <meta property="og:type" content="{{if .IsPage}}article{{else}}website{{end}}">
