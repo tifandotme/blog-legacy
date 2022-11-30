@@ -4,5 +4,6 @@ description : ""
 techtags :
     -
 date : {{.Date}}
+thumbnail : ""
 draft : true
 ---

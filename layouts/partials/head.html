@@ -14,17 +14,29 @@ _default/baseof.html
     {{end -}}
     <meta name="description" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
     <meta name="author" content="{{.Site.Params.Author}}">
-
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{.Title | title}}">
-    <meta name="twitter:description" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
     <meta name="twitter:site" content="@tifandotme">
     <meta property="og:title" content="{{.Title | title}}">
     <meta property="og:description" content="{{with .Param `description`}}{{.}}{{else}}{{.Summary}}{{end}}">
+    {{- $cover := (printf "%scover.jpg" .Site.BaseURL) -}}
+    {{- $images := .Resources.ByType "image" -}}
+    {{- if $images}}
+        {{- with $images.GetMatch (printf "*%s*" .Params.thumbnail)}}
+            {{- $cover = .Permalink -}}
+        {{else}}
+            {{- $cover = (index $images 0).Permalink -}}
+        {{end -}}
+    {{end}}
+    <meta property="og:image" content="{{$cover}}">
     <meta property="og:url" content="{{.Permalink}}">
-    <meta property="og:type" content="{{if .IsHome}}website{{else}}article{{end}}">
+    <meta property="og:type" content="{{if .IsPage}}article{{else}}website{{end}}">
     <meta property="og:site_name" content="tifan.me">
-
+    {{- if .IsPage }}
+    {{- $iso8601 := "2006-01-02T15:04:05-07:00"}}
+    <meta property="article:section" content="{{.Section}}">
+    {{with .PublishDate}}<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>{{end}}
+    {{ with .Lastmod }}<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }}>{{end}}
+    {{- end -}}
     {{- $style := resources.Get "/style.css" | minify | fingerprint}}
     <link rel="stylesheet" href="{{$style.Permalink}}" type="text/css" media="all">
     {{- $style := resources.Get "/syntax-highlighting.css" | minify | fingerprint}}

@@ -4,5 +4,6 @@ description : ""
 personaltags :
     -
 date : {{.Date}}
+thumbnail : ""
 draft : true
 ---
