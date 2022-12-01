@@ -132,4 +132,3 @@ In a year, I expect to have landed in job related in software development.
 In 5 years, I expect to have a position of senior developer 
 
 My plan regarding location of my employment as of right now lies in Jabodetabek or Yogyakarta. 
-
