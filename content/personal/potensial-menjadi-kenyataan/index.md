@@ -1,6 +1,6 @@
 ---
 title : "Transformasi Potensi Menjadi Kenyataan"
-description : "Jordan Peterson's TEDx Talk in Bahasa Indonesia"
+description : "Dr. Jordan Peterson's TEDx Talk in Bahasa Indonesia about human potential. And my thoughts on it."
 personaltags :
     - psychology
     - bahasa indonesia
@@ -10,7 +10,7 @@ thumbnail : "phainesthai"
 
 {{< youtube id="tLteWutitFM" title="Potential: Jordan Peterson at TEDxUofT">}}
 
-> "Potensial" adalah judul dari TEDx Talk oleh Jordan Peterson. Berikut adalah esai dalam Bahasa Indonesia atas topik tersebut.
+> "Potensial" adalah judul dari TEDx Talk oleh Jordan Peterson. Berikut adalah esai dalam Bahasa Indonesia atas topik tersebut. Saya juga memberi penjelasan pribadi saya diakhir post. 
 
 # Arti kehidupan
 
@@ -91,3 +91,13 @@ Ketika kita lebih terlibat pada hal yang menarik bagi kita. Disitulah dimana hid
 Ketika kita mengejar apa yang kita minati, kita menjadi keras dan kuat seperti berlian. Dan mampu menanggung kondisi kehidupan yang mengerikan tanpa menjadi korup.  
 
 “He who has a why to live for can bear almost any how.” ― Friedrich Nietzsche
+
+# Penjelasan pribadi saya
+
+Dr. Jordan Peterson mengekspresikan bahwa sebagai manusia, selama kita terus maju dalam hidup, pengelihatan kita akan mengecil dan menyempit, lalu diakhir jalan pengelihatan kita baru menyebar. Dalam kata lain, kita berspesialisasi dalam aspek apapun (karir dan spiritual), lalu akan mengeneralisasi kembali.
+
+Setelah kita berspesialisasi, peluang dalam hidup tidak akan berkurang, melainkan meluas. Dunia akan menawarkan lebih banyak yang tidak pernah kita bayangkan. Namun seperti yang Dr. Peterson katakan, kita menjadi lebih buta akan jalur hidup lain yang munkgin bisa kita tempuhi sebelumnya, karena kepercayaan, prinsip, dan kemampuan yang telah kita fokuskan telah menjadi bagian yang besar dalam hidup kita.
+
+Aspek lain yang dibicarakan diawal tentang nihilism juga perlu dipertimbangkan. Dr. Peterson mengatakan bahwa "memfokuskan/menyempitkan" hidup kita dapat mencegah dirasakannya efek negatif akibat memiliki pandangan pada hidup yang pada dasarnya tidak bermakna (nihilism).
+
+Prof. Douglas Hedley dari University of Cambridge mengatakan bahwa di sesi interview oleh BBC, "memiliki tujuan hidup merupakan elemen yang penting dari kehidupan yang bahagia".
