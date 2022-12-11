@@ -100,4 +100,6 @@ Setelah kita berspesialisasi, peluang dalam hidup tidak akan berkurang, melainka
 
 Aspek lain yang dibicarakan diawal tentang nihilism juga perlu dipertimbangkan. Dr. Peterson mengatakan bahwa "memfokuskan/menyempitkan" hidup kita dapat mencegah dirasakannya efek negatif akibat memiliki pandangan pada hidup yang pada dasarnya tidak bermakna (nihilism).
 
-Prof. Douglas Hedley dari University of Cambridge mengatakan bahwa di sesi interview oleh BBC, "memiliki tujuan hidup merupakan elemen yang penting dari kehidupan yang bahagia".
+Menjadi orang yang religius juga salah satu "peran" yang bisa ditempuhi dan difokuskan.
+
+Perlu saya tambahkan, Prof. Douglas Hedley dari University of Cambridge mengatakan bahwa di sesi interview oleh BBC, "memiliki tujuan hidup merupakan elemen yang penting dari kehidupan yang bahagia".
