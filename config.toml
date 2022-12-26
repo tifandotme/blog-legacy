@@ -5,12 +5,6 @@ pluralizelisttitles = 'false'
 enableRobotsTXT = 'true'
 enableGitInfo = 'true'
 enableEmoji = 'true'
-markup.highlight.noClasses = 'false'
-markup.highlight.lineNos = 'true'
-markup.highlight.lineNumbersInTable = 'false'
-markup.highlight.guessSyntax = 'true'
-markup.goldmark.renderer.unsafe = 'true'
-markup.goldmark.renderer.hardWraps = 'true'
 [params]
     author = 'Tifan Dwi Avianto'
     description = "Tifan's blog containing tech and personal-related posts"
@@ -20,3 +14,13 @@ markup.goldmark.renderer.hardWraps = 'true'
 [permalinks]
     techtags = '/tech/tags/:title'
     personaltags = '/personal/tags/:title'
+[markup]
+    [highlight]
+        noClasses = 'false'
+        lineNumbersInTable = 'false'
+        guessSyntax = 'true'
+        lineNos = 'true'
+    [goldmark]
+        [renderer]
+            unsafe = 'true'
+            hardWraps = 'true'
