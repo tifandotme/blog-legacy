@@ -1,8 +1,8 @@
-baseURL = 'https://tifan.me/'
+baseURL = 'https://legacy.tifan.me/'
 languageCode = 'en_US'
 title = 'Tifan Dwi Avianto'
 pluralizelisttitles = 'false'
-enableRobotsTXT = 'true'
+enableRobotsTXT = 'false'
 enableGitInfo = 'true'
 enableEmoji = 'true'
 [params]
