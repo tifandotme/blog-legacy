@@ -4,6 +4,7 @@ description : "I gained confidence after I proposed to resign at my job."
 personaltags :
     - diary
 date : 2022-11-09T19:55:43+07:00
+draft: true
 ---
 
 # The Event
