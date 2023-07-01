@@ -1,12 +1,11 @@
 +++
 title = 'About'
 description = "Find out more about the blog's author"
-# aliases = ['about-me', 'contact']
 +++
 
 Hi I'm Tifan. ~~I am currently pursuing a Bachelor Degree in Informatics (or Computer Science if you prefer)~~ (Update June 2023: I graduated!)
 
-{{< figure src="potrait.jpg" alt="Author potrait" class="right">}}
+{{< figure src="/about/potrait.jpg" alt="Author potrait" class="right">}}
 
 # History
 
