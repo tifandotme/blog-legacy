@@ -39,7 +39,7 @@ Contact details and socials are on the homepage.
 
 # About this site
 
-- [Hosted on GitHub](https://github.com/tifandotme/tifan.me).
+- [Hosted on GitHub](https://github.com/tifandotme/blog-legacy).
 - Built with Hugo.
 - I aim for simplicity and functionality, hence the minimal look.
 - It also need to be **blazingly fasttt**.
